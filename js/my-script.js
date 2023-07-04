@@ -57,6 +57,17 @@ createApp({
             this.newToDo.text=null
 
             
+        },
+        changeValue(index){
+
+            if(this.toDos[index].done==true){
+                this.toDos[index].done=false;
+                
+            }
+
+            else{
+                 this.toDos[index].done=true;
+            }
         }
 
 

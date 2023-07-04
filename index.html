@@ -41,7 +41,7 @@
                 <div>
 
                     <!-- <form  @submit.prevent="addToDo()" action=""> -->
-                        <input @keyup.enter="addToDo()" required type="text" name="" id="" v-model="newToDo.text">
+                        <input @keyup.enter="addToDo()" required placeholder="Aggiungi un ToDo..." type="text" name="" id="" v-model="newToDo.text">
     
                         <button @click="addToDo()">
                             Aggiungi
@@ -50,11 +50,11 @@
 
                 </div>
 
-                <ul>
+                <ul v-if="toDos.length>0">
 
                     <li v-for="(singleToDo,index) in toDos" >
 
-                       <span :class = "(singleToDo.done)? 'striked-text': ''">
+                       <span @click="changeValue(index)" :class = "(singleToDo.done)? 'striked-text': ''">
                         {{singleToDo.text}}
                        </span>
 
@@ -65,6 +65,12 @@
                     </li>
 
                 </ul>
+
+                <div v-else>
+
+                    Non hai nessuna operazione da completare. se vuoi aggiungere una operzione riempii il campo sopra 
+
+                </div>
 
             </div>
 
