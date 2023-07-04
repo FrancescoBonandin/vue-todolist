@@ -21,7 +21,7 @@ createApp({
                     done:false
                 },
                 {
-                    text:"Ricordarsi riunione delle xx:yy",
+                    text:"Ricordarsi riunione delle 15:00",
                     done:false
                 },
                 {
