@@ -38,14 +38,17 @@
 
             <div id="app">
 
+                <div>
 
-                <form @submit.prevent="addToDo()" action="">
-                    <input required type="text" name="" id="" v-model="newToDo.text">
+                    <!-- <form  @submit.prevent="addToDo()" action=""> -->
+                        <input @keyup.enter="addToDo()" required type="text" name="" id="" v-model="newToDo.text">
+    
+                        <button @click="addToDo()">
+                            Aggiungi
+                        </button>
+                    <!-- </form> -->
 
-                    <button>
-                        Aggiungi
-                    </button>
-                </form>
+                </div>
 
                 <ul>
 
