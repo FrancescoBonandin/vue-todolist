@@ -40,9 +40,15 @@
 
                 <ul>
 
-                    <li v-for="singleToDo in toDos" :class = "(singleToDo.done)? 'striked-text': ''">
+                    <li v-for="(singleToDo,index) in toDos" >
 
+                       <span :class = "(singleToDo.done)? 'striked-text': ''">
                         {{singleToDo.text}}
+                       </span>
+
+                        <div @click="removeToDo(index)" class="bf-remove-btn">
+                            &cross;
+                        </div>
 
                     </li>
 

@@ -19,4 +19,22 @@
     text-decoration: line-through;
 }
 
+.bf-remove-btn{
+    width: 1.2rem;
+    height: 1.2rem;
+    text-align: center;
+    line-height: 1.2rem;
+    cursor:pointer;
+    display:inline-block;
+    margin-left: auto;
+    border: 1px solid slategray;
+    border-radius: 0.3rem;
+    background-color: slategray;
+    color: rgb(50, 50, 50);
+}
 
+.bf-remove-btn:hover{
+    color: red;
+    background-color: lightgrey;
+    box-shadow: inset 1px black;
+}
