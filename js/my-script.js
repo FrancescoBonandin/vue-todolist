@@ -8,7 +8,7 @@ createApp({
 
         return{
             newToDo:{ text:null,
-                        done:false
+                      done:false
 
             },
             toDos:[

@@ -34,11 +34,13 @@
     
     <body >
 
-        <div class="container">
+        <div class="container text-center">
 
             <div id="app">
 
-                <div>
+                <h1 class="to-do-title">ToDoList</h1>
+
+                <div class="input-container">
 
                     <!-- <form  @submit.prevent="addToDo()" action=""> -->
                         <input @keyup.enter="addToDo()" required placeholder="Aggiungi un ToDo..." type="text" name="" id="" v-model="newToDo.text">
@@ -50,16 +52,24 @@
 
                 </div>
 
-                <ul v-if="toDos.length>0">
+                <ul class="to-do-container" v-if="toDos.length>0">
 
                     <li v-for="(singleToDo,index) in toDos" >
 
-                       <span @click="changeValue(index)" :class = "(singleToDo.done)? 'striked-text': ''">
+                        <div v-if="singleToDo.done" class="check" >
+                            &checkmark;
+                        </div>
+
+                        <div v-else class="cross">
+                            &cross;
+                        </div>
+
+                       <span @click="changeValue(index)" class="interactible" :class = "(singleToDo.done)? 'striked-text': ''">
                         {{singleToDo.text}}
                        </span>
 
                         <div @click="removeToDo(index)" class="bf-remove-btn">
-                            &cross;
+                            <i class="fa-solid fa-xmark"></i>
                         </div>
 
                     </li>

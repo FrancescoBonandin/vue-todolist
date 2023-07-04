@@ -15,8 +15,84 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.to-do-title{
+    color: lightgreen;
+    font-size: 3rem;
+    width: 50%;
+    margin: 1rem auto;
+}
+
+.input-container{
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 1rem; 
+    padding-top: 0.8rem;
+    border: 1px solid grey;
+    box-shadow: 0px 0px 2px 2px grey;
+}
+
+.input-container *{
+    margin: 0 1rem;
+    display: inline-block;
+    margin-bottom: 1rem; 
+}
+
+ul{
+    list-style: none;
+}
+
+
+.to-do-container{
+    padding: 0;
+    background-color: bisque;
+    border: 1px solid grey;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 2px 2px grey;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.to-do-container > li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.8rem;
+    border-bottom: 1px solid grey;
+}
+
+.to-do-container > li:last-of-type{
+    border-bottom: 0;
+}
+
+.to-do-container > li *{
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+
 .striked-text{
     text-decoration: line-through;
+}
+
+.check{
+    color: green;
+    font-size: 1.4rem;
+ 
+}
+
+.cross{
+    color: red;
+    font-size: 1.4rem;
+ 
+}
+
+.interactible{
+    cursor: pointer;
+}
+
+.interactible:hover{
+    text-shadow: 0px 0px 2px greenyellow;
+    font-size: 1.2rem;
 }
 
 .bf-remove-btn{
@@ -31,6 +107,7 @@
     border-radius: 0.3rem;
     background-color: slategray;
     color: rgb(50, 50, 50);
+    text-align: center;
 }
 
 .bf-remove-btn:hover{
@@ -38,3 +115,5 @@
     background-color: lightgrey;
     box-shadow: inset 1px black;
 }
+
+
