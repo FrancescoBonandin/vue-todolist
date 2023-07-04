@@ -7,6 +7,10 @@ createApp({
     data(){
 
         return{
+            newToDo:{ text:null,
+                        done:false
+
+            },
             toDos:[
                 {
                     text:"Seguire la lezione del mattino",
@@ -30,10 +34,32 @@ createApp({
 
     },
     methods: {
-        
+
         removeToDo(index){
             this.toDos.splice(index,1);
+        },
+
+        cloneToDo(obj){
+            let clone={};
+            for(key in obj){
+                clone[key]=obj[key]; 
+            }
+            return clone;
+
+        },
+
+        addToDo(){
+            if(this.newToDo.text.trim(" ").length >0){
+               
+                this.toDos.push(this.cloneToDo(this.newToDo))
+                console.log(this.toDos)
+            }
+            this.newToDo.text=null
+
+            
         }
+
+
     }
 
 }).mount("#app")
